@@ -1,0 +1,29 @@
+﻿@using ECommerce.Models
+@model List<ProductViewModel>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Adı</th>
+            <th scope="col">Kategori</th>
+            <th scope="col">Eski Fiyat</th>
+            <th scope="col">İndirimli Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.CategoryName</td>
+            <td>@item.OldPrice</td>
+            <td>@item.DiscountPrice</td>
+        </tr>
+
+        }
+
+    </tbody>
+</table>
+

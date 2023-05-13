@@ -1,0 +1,46 @@
+﻿@using ECommerce.Models
+@model ViewModel
+
+
+<div class="btn btn-outline-primary">
+
+    <a href="/Home/DiscountProducts/" class="btn-btn-warning">İndirimli Ürünler </a>
+</div>
+
+
+<div class="btn btn-outline-primary">
+
+    <a href="/Admin/Index/" class="btn-btn-warning">Admin Paneli</a>
+</div>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">CategoryId</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">IsActive</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Product)
+        {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.Name</td>
+            <td>@item.CategoryId</td>
+            <td>@item.Price</td>
+            <td>@item.IsActive</td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+
+
+
+
+

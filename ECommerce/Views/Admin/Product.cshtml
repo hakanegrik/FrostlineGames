@@ -1,0 +1,40 @@
+﻿@using ECommerce.Models
+@model ViewModel
+
+
+
+
+
+<div class="btn btn-outline-primary">
+
+    <a href="/Admin/CreateProduct/" class="btn-btn-warning">Create Product</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">CategoryId</th>
+            <th scope="col">IsActive</th>
+            <th scope="col">Transactions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Product)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.CategoryId</td>
+                <td>@item.IsActive</td>
+                <td><a href="/Admin/EditProduct/@item.Id" class="btn-btn-warning">Edit</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
